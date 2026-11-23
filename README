@@ -1,1 +1,71 @@
-This is an archive
+$ ./v2ppt.exe -h
+usage: v2ppt.exe [-h] [-bv BOOK_VERSION] [-b BOOK] [-c CHAPTER_NUM] [-v VERSE VERSE]
+                 [--call2w] [--bold] [--bapt]
+
+    ==================================================================
+    V2PPT v2.1
+      Output Bible verses to PPT by using default:CUNP1/ or RCUV1/
+        NOTE: Make sure verse_bg.jpg and verseTemplate.pptx is in dir.
+        NOTE: THe output name is : <Book>_<chapter>_<vstart>_<vend>.pptx
+    ==================================================================
+
+
+options:
+  -h, --help            show this help message and exit
+  -bv, --book_version BOOK_VERSION
+                        Which bible version: default:CUNP1/ or RCUV1/
+  -b, --book BOOK       The name of the bible book: e.g. GEN/
+  -c, --chapter_num CHAPTER_NUM
+                        The chapter number.
+  -v, --verse VERSE VERSE
+                        The start and end verse.
+  --call2w              Create call2 worship slide
+  --bold                Enable bold font
+  --bapt                Enable baptist sub
+
+    OT :
+      GEN EXO LEV NUM DEU JOS JDG
+      RUT 1SA 2SA 1KI 2KI 1CH 2CH
+      EZR NEH EST JOB PSA PRO ECC
+      SNG ISA JER LAM EZK DAN HOS
+      JOL AMO OBA JON MIC NAM HAB
+      ZEP HAG ZEC MAL
+
+    NT :
+      MAT MRK LUK JHN ACT ROM 1CO
+      2CO GAL EPH PHP COL 1TH 2TH
+      1TI 2TI TIT PHM HEB JAS 1PE
+      2PE 1JN 2JN 3JN JUD REV
+
+    Examples:
+      V2PPT -bv RCUV1|CUV1 -b <BookName> -c <chapter> -v <st_verse> <end_verse>
+      V2PPT -bv RCUV1 -b GEN/ -c 1 -v 1 10
+      Output name: GEN_1_1_10.pptx
+
+      bapt = 洗或浸
+
+
+$ ./announce.exe -h
+usage: announce.exe [-h] [-f INFILE] [-s SPWORD]
+
+    ==================================================================
+    ANNOUNCE v1.1
+    ==================================================================
+
+
+options:
+  -h, --help           show this help message and exit
+  -f, --infile INFILE  PDF file from Sunday worship
+  -s, --spword SPWORD  Split on special announcement
+
+$ ./stitle.exe -h
+usage: stitle.exe [-h] [-f INFILE]
+
+    ==================================================================
+    STITLE v1.0
+    ==================================================================
+
+
+options:
+  -h, --help           show this help message and exit
+  -f, --infile INFILE  PDF file from Sunday worship
